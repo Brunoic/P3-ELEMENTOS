@@ -55,7 +55,7 @@ loadA <= instruction(6) or (not instruction(17));
 loadS <= instruction(5) and instruction(17);
 loadD <= instruction(4) and instruction(17);
 loadM <= instruction(3) and instruction(17);
-loadPC <= (instruction(17) and ((instruction(2) and ng and (not zr)) or (instruction(1) and zr) or (instruction(0) and (not zr) and (not ng))));
+loadPC <= (instruction(17) and ((not instruction(16) or ng or (not zr))));
 
 
 
